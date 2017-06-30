@@ -27,3 +27,7 @@ ul {
 .container-fluid {
     overflow: auto;
 }
+
+.form-group{
+    float: right;
+}
