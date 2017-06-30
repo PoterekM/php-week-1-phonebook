@@ -19,9 +19,16 @@
                 <input type="text" name="address" id="address">
             </div>
             <button type="submit" name="button">Add Contact!</button>
-
-
         </form>
+
+        <h4>Contacts</h4>
+        {% if contacts is not empty %}
+            {% for contact in contacts %}
+                <p> {{ contact.getName }} </p>
+                <p> {{ contact.getNumber }} </p>
+                <p> {{ contact.getAddress }}</p>
+            {% endfor %}
+        {% endif %}
 
     </div>
 
