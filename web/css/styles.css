@@ -1,8 +1,15 @@
 #contact-created .well{
-    background-color: salmon;
+    /*background-color: salmon;
     text-align: center;
-    list-style-type: none;
+    list-style-type: none;*/
 }
+
+body {
+    background-color: teal;
+    text-align: center;
+}
+
+
 
 ul {
     list-style-type: none;

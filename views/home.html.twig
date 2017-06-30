@@ -12,7 +12,7 @@
 
         <div class="well">
             <div class="row">
-                <div class="col-md-5">
+                <div class="col-sm-5">
                     <form action="/new_contact_display" method="post">
                         <div class="form-group">
                             <label for="name">Name:</label>
@@ -31,17 +31,17 @@
                             <input type="text" name="image" id="image">
                         </div>
                 </div>
-                <div class="col-md-7">
+                <div class="col-sm-7">
                 </div>
 
             </div>
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-sm-6">
                         <button type="submit" class="btn btn-success" name="button"> Add Contact!</button>
                     </form>
                     </div>
 
-                <div class="col-md-6">
+                <div class="col-sm-6">
                     <form action='/delete' method='post'>
                         <button class="btn btn-danger" type='submit'>Delete all</button>
                     </form>
@@ -52,9 +52,17 @@
 
         </div>
 
+
+
         {% if contacts is not empty %}
-            <h3>Contacts</h3>
-            {% for contact in contacts %}
+        <div class="row">
+            <div class="col-sm-2">
+                <!-- empty -->
+            </div>
+            <div class="col-sm-8">
+
+                <h3>Contacts</h3>
+                {% for contact in contacts %}
 
                 <div class="panel panel-warning">
                     <div class="panel-heading">
@@ -63,13 +71,19 @@
                     <div class="panel-body">
                         <ul>
                             <li><img src='{{ contact.getImage }}' width='120px'><li>
-                            <li>{{ contact.getNumber }}</li>
-                            <li>{{ contact.getAddress }}</li>
-                        </ul>
+                                <li>{{ contact.getNumber }}</li>
+                                <li>{{ contact.getAddress }}</li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-            {% endfor %}
-        {% endif %}
+                    {% endfor %}
+                    {% endif %}
+            </div>
+            <div class="col-sm-2">
+                <!-- empty -->
+            </div>
+
+        </div>
 
 
     </div>
