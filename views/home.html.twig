@@ -20,6 +20,10 @@
             </div>
             <button type="submit" name="button">Add Contact!</button>
         </form>
+        
+        <form action='/delete' method='post'>
+            <button type='submit'>Delete all</button>
+        </form>
 
         <h4>Contacts</h4>
         {% if contacts is not empty %}
