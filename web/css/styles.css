@@ -1,11 +1,7 @@
-
-
 body {
     background-color: teal;
     text-align: center;
 }
-
-
 
 ul {
     list-style-type: none;
@@ -15,7 +11,6 @@ ul {
     background-color: salmon;
     text-align: center;
     overflow: hidden;
-
 }
 
 .well img {

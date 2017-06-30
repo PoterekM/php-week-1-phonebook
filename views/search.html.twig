@@ -6,14 +6,12 @@
 </head>
 <body>
     <div class="container">
-
         <h1>Contact Search</h1>
         {% if contacts is empty %}
         <div class="well">
             <p>Sorry, your search did not match any of your saved contacts</p>
             <a href='/'>Back to Contacts</a>
         </div>
-
         {% else %}
             {% for contact in contacts %}
             <div class="panel panel-warning">
@@ -32,8 +30,6 @@
                 <a href='/'>Back to Contacts</a>
             </div>
         {% endif %}
-
     </div>
-
 </body>
 </html>
