@@ -1,29 +1,64 @@
 <html>
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
     <title>Contacts</title>
 </head>
 <body>
-    <div class="container">
-        <form action="/new_contact_display" method="post">
-            <div class="form-group">
-                <label for="name">Name:</label>
-                <input type="text" name="name" id="name">
-            </div>
-            <div class="form-group">
-                <label for="number">Number:</label>
-                <input type="number" name="number" id="number">
-            </div>
-            <div class="form-group">
-                <label for="address">Address:</label>
-                <input type="text" name="address" id="address">
-            </div>
-            <button type="submit" name="button">Add Contact!</button>
-        </form>
+    <div class="container home">
+        <div class="jumbotron">
+            <h1>Address book<h1>
+        </div>
 
-        <form action='/delete' method='post'>
-            <button type='submit'>Delete all</button>
-        </form>
+        <div class="well">
+            <div class="row">
+                <div class="col-md-5">
+                    <form action="/new_contact_display" method="post">
+                        <div class="form-group">
+                            <label for="name">Name:</label>
+                            <input type="text" name="name" id="name">
+                        </div>
+                        <div class="form-group">
+                            <label for="number">Number:</label>
+                            <input type="number" name="number" id="number">
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Address:</label>
+                            <input type="text" name="address" id="address">
+                        </div>
+                        <div class="form-group">
+                            <label for="image">Show us your pics (with a url)</label>
+                            <input type="text" name="image" id="image">
+                        </div>
+                </div>
+                <div class="col-md-7">
+                </div>
+                <!-- <div class="col-md-3">
+
+                </div> -->
+
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <button type="submit" class="btn btn-success" name="button"> Add Contact!</button>
+                </form>
+
+                </div>
+                <div class="col-md-6">
+                    <form action='/delete' method='post'>
+                        <button class="btn btn-danger" type='submit'>Delete all</button>
+                    </form>
+
+                </div>
+                <!-- <div class="col-md-2">
+
+                </div> -->
+
+            </div>
+
+
+        </div>
+
 
         {% if contacts is not empty %}
         <h1>Contacts</h1>
