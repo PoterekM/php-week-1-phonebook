@@ -22,7 +22,10 @@
         $contact = new Contact($_POST['name'], $_POST['number'], $_POST['address']);
         $contact->save();
         return $app['twig']->render('new_contact_display.html.twig', array('contacts' => $contact));
+    });
 
+    $app->post("/delete", function() use($app){
+        return $app['twig']->render('delete_all.html.twig', array('contacts' => Contact::deleteAll()));
     });
 
 
