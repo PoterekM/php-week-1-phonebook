@@ -27,7 +27,6 @@
     $app->get("/search", function() use ($app){
         $contacts = Contact::getAll();
         $contacts_matching_search = array();
-
         if (empty($contacts_matching_search) == true) {
             foreach ($contacts as $contact) {
                 if ($contact->getName() == $_GET['search']) {
@@ -36,7 +35,6 @@
             }
         }
         return $app['twig']->render('search.html.twig', array('contacts' => $contacts_matching_search));
-
     });
 
     $app->post("/delete", function() use($app){
