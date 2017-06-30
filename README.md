@@ -19,12 +19,12 @@ _In order to copy this directory to your computer locally:_
 * _open Terminal, navigate to desktop, and type:_
 * _$ `git clone https://github.com/PoterekM/php-week-1-phonebook.git`_
 * _$ `cd php-week-1-phonebook`_
-* _$ `cd web`_
-* _$ `cd php-week-1-phonebook.git`_
-* _$ `php -S localhost:8000` to open your local server_
 * _$ `composer install`_
+* _$ `cd web`_
+* _$ `php -S localhost:8000` to open your local server_
 * _in your browser (Chrome preferred) type in `localhost:8000`_
 * _Enjoy your address book!_
+* **if you do not have Composer here is a link to their website https://getcomposer.org/download/**
 
 
 
