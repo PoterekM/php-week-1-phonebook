@@ -5,7 +5,7 @@
     <title>Contacts</title>
 </head>
 <body>
-    <div class="container home">
+    <div class="container-fluid home">
         <div class="jumbotron">
             <h1>Address book<h1>
         </div>
@@ -59,18 +59,25 @@
 
         </div>
 
-
         {% if contacts is not empty %}
-        <h1>Contacts</h1>
+            <h3>Contacts</h3>
             {% for contact in contacts %}
-                <h3> {{ contact.getName }} </h3>
-                <ul>
-                    <li><img src='{{ contacts.getImage }}' width='120px'></li>
-                    <li>{{ contact.getNumber }}</li>
-                    <li>{{ contact.getAddress }}</li>
-                </ul>
+
+                <div class="panel panel-warning">
+                    <div class="panel-heading">
+                        <p> {{ contact.getName }} </p>
+                    </div>
+                    <div class="panel-body">
+                        <img src='{{ contacts.getImage }}' width='120px'>
+                        <ul>
+                            <li>{{ contact.getNumber }}</li>
+                            <li>{{ contact.getAddress }}</li>
+                        </ul>
+                    </div>
+                </div>
             {% endfor %}
         {% endif %}
+
 
     </div>
 

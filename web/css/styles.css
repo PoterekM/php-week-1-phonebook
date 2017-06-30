@@ -8,7 +8,22 @@ ul {
     list-style-type: none;
 }
 
-.home .well {
+.well {
     background-color: salmon;
     text-align: center;
+    overflow: hidden;
+
+}
+
+.well img {
+    float: left;
+}
+
+.panel img{
+    float: left;
+    margin: 20px;
+}
+
+.container-fluid {
+    overflow: auto;
 }
