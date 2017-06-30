@@ -7,8 +7,8 @@
 ## Description
 
 _This project allows a user to compile their contacts._
-* **Users are able to enter a contact name, address, and phone number as well as upload a picture**
-* **Users are able to delete all contacts**
+* **Users are able to enter a contact name, address, and phone number as well as upload a picture.**
+* **Users are able to delete all contacts.**
 
 
 
