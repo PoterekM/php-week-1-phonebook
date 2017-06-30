@@ -26,11 +26,13 @@
         </form>
 
         {% if contacts is not empty %}
-        <h4>Contacts</h4>
+        <h1>Contacts</h1>
             {% for contact in contacts %}
-                <p> {{ contact.getName }} </p>
-                <p> {{ contact.getNumber }} </p>
-                <p> {{ contact.getAddress }}</p>
+                <h3> {{ contact.getName }} </h3>
+                <ul>
+                    <li>{{ contact.getNumber }}</li>
+                    <li>{{ contact.getAddress }}</li>
+                </ul>
             {% endfor %}
         {% endif %}
 
