@@ -65,6 +65,7 @@
             {% for contact in contacts %}
                 <h3> {{ contact.getName }} </h3>
                 <ul>
+                    <li><img src='{{ contacts.getImage }}' width='120px'></li>
                     <li>{{ contact.getNumber }}</li>
                     <li>{{ contact.getAddress }}</li>
                 </ul>
