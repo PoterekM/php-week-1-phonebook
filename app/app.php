@@ -14,5 +14,9 @@
         'twig.path' => __DIR__.'/../views'
     ));
 
+    $app->get("/", function() {
+        return "Hello friend!";
+    });
+
     return $app;
 ?>
