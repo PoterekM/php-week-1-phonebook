@@ -38,6 +38,11 @@
             $this->address = $new_address;
         }
 
+        static function getAll()
+        {
+            return $_SESSION['list_of_contacts'];
+        }
+
 
 
     }
