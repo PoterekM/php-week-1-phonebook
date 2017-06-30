@@ -32,8 +32,8 @@
                         </div>
                 </div>
                 <div class="col-sm-7">
+                    <!-- empty -->
                 </div>
-
             </div>
                 <div class="row">
                     <div class="col-sm-6">
@@ -41,15 +41,12 @@
                     </form>
                     </div>
 
-                <div class="col-sm-6">
-                    <form action='/delete' method='post'>
-                        <button class="btn btn-danger" type='submit'>Delete all</button>
-                    </form>
+                    <div class="col-sm-6">
+                        <form action='/delete' method='post'>
+                            <button class="btn btn-danger" type='submit'>Delete all</button>
+                        </form>
+                    </div>
                 </div>
-
-            </div>
-
-
         </div>
 
 
@@ -60,10 +57,8 @@
                 <!-- empty -->
             </div>
             <div class="col-sm-8">
-
                 <h3>Contacts</h3>
                 {% for contact in contacts %}
-
                 <div class="panel panel-warning">
                     <div class="panel-heading">
                         <p> {{ contact.getName }} </p>
@@ -71,22 +66,18 @@
                     <div class="panel-body">
                         <ul>
                             <li><img src='{{ contact.getImage }}' width='120px'><li>
-                                <li>{{ contact.getNumber }}</li>
-                                <li>{{ contact.getAddress }}</li>
-                            </ul>
-                        </div>
+                            <li>{{ contact.getNumber }}</li>
+                            <li>{{ contact.getAddress }}</li>
+                        </ul>
                     </div>
-                    {% endfor %}
-                    {% endif %}
+                </div>
+                {% endfor %}
+            {% endif %}
             </div>
             <div class="col-sm-2">
                 <!-- empty -->
             </div>
-
         </div>
-
-
     </div>
-
 </body>
 </html>
