@@ -58,6 +58,13 @@
             </div>
             <div class="col-sm-8">
                 <h3>Contacts</h3>
+
+                <form action='/search'>
+                    <label for="search">Enter your contact name</label>
+                    <input type="text" name="search" id="search">
+                    <button type='submit'>Search for them!</button>
+                </form>
+                
                 {% for contact in contacts %}
                 <div class="panel panel-warning">
                     <div class="panel-heading">

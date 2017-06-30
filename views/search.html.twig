@@ -1,0 +1,19 @@
+<html>
+<head>
+    <title>Contact Search</title>
+</head>
+<body>
+    <h1>Contact Search</h1>
+    {% if contacts is empty %}
+        <p>Sorry, your search did not match any of your saved contacts</p>
+    {% else %}
+        {% for contact in contacts %}
+        <ul>
+            <li> {{ contact.getName }} </li>
+            <li> {{ contact.getNumber }} </li>
+        </ul>
+        {% endfor %}
+    {% endif %}
+        <a href='/'>Back to Contacts</a>
+</body>
+</html>
