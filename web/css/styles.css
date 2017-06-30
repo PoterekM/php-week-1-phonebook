@@ -1,0 +1,9 @@
+#contact-created .well{
+    background-color: salmon;
+    text-align: center;
+    list-style-type: none;
+}
+
+ul {
+    list-style-type: none;
+}
