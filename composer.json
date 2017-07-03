@@ -4,3 +4,7 @@
         "twig/twig": "~1.0"
     }
 }
+ /*Tell composer which dependencies we need. Dependencies are pieces of code that project is dependin on to do its job. these could be php libraries written by other people.*/
+
+/*
+ You will need to tell composer to download our requirements by running "composer install"*/

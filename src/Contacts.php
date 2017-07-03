@@ -1,3 +1,6 @@
+<!-- source folder -->
+
+
 <?php
 
     class Contact {
@@ -52,8 +55,11 @@
         {
             return $_SESSION['list_of_contacts'];
         }
-
-        function save()
+        // way to loop through all of our saved tasks.
+        // this is a static method.
+        // it is a getter but it works on the whole class
+        // static methods are called on the class itself rather than on one instance. Classes are the car factory.
+        // function save()
         {
             array_push($_SESSION['list_of_contacts'], $this);
         }
