@@ -1,5 +1,4 @@
 <?php
-
     class Contact {
 
         private $name;
@@ -60,11 +59,5 @@
         {
             return $_SESSION['list_of_contacts'] = array();
         }
-
-
-
     }
-
-
-
  ?>
