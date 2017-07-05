@@ -1,25 +1,21 @@
 <html>
-<head>
+  <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <title>New Contact Made!</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container-fluid" id="contact-created">
-        <div class="well">
-
-            <h1>New contact created!</h1>
-            <h3>{{ contacts.getName }}</h3>
-            <ul>
-                <img src='{{ contacts.getImage }}' width='120px'>
-                <li> {{ contacts.getNumber }}</li>
-                <li> {{ contacts.getAddress }}</li>
-            </ul>
-
-            <a href='/'>Back to Contacts</a>
-
-        </div>
+      <div class="well">
+        <h1>New contact created!</h1>
+        <h3>{{ contacts.getName }}</h3>
+        <ul>
+          <img src='{{ contacts.getImage }}' width='120px'>
+          <li> {{ contacts.getNumber }}</li>
+          <li> {{ contacts.getAddress }}</li>
+        </ul>
+        <a href='/'>Back to Contacts</a>
+      </div>
     </div>
-
-</body>
+ </body>
 </html>

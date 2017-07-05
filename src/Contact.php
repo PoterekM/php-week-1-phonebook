@@ -13,7 +13,6 @@
             $this->address = $address;
             $this->image = $image;
         }
-
         function getName()
         {
             return $this->name;

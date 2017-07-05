@@ -1,35 +1,35 @@
 <html>
-<head>
+  <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/styles.css">
     <title>Contact Search</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <h1>Contact Search</h1>
-        {% if contacts is empty %}
-        <div class="well">
-            <p>Sorry, your search did not match any of your saved contacts</p>
-            <a href='/'>Back to Contacts</a>
+      <h1>Contact Search</h1>
+      {% if contacts is empty %}
+      <div class="well">
+        <p>Sorry, your search did not match any of your saved contacts</p>
+        <a href='/'>Back to Contacts</a>
+      </div>
+      {% else %}
+        {% for contact in contacts %}
+        <div class="panel panel-warning">
+          <div class="panel-heading">
+            <p> {{ contact.getName }}</p>
+          </div>
+          <div class="panel-body">
+            <ul>
+              <img src='{{ contact.getImage }}' width='200px'>
+              <li> {{ contact.getNumber }} </li>
+            </ul>
+         </div>
         </div>
-        {% else %}
-            {% for contact in contacts %}
-            <div class="panel panel-warning">
-                <div class="panel-heading">
-                    <p> {{ contact.getName }}</p>
-                </div>
-                <div class="panel-body">
-                    <ul>
-                        <img src='{{ contact.getImage }}' width='200px'>
-                        <li> {{ contact.getNumber }} </li>
-                    </ul>
-                </div>
-            </div>
-            {% endfor %}
-            <div class="well">
-                <a href='/'>Back to Contacts</a>
-            </div>
-        {% endif %}
+        {% endfor %}
+        <div class="well">
+          <a href='/'>Back to Contacts</a>
+        </div>
+      {% endif %}
     </div>
-</body>
+  </body>
 </html>

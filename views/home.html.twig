@@ -1,90 +1,89 @@
 <html>
-<head>
+  <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/styles.css">
     <title>Contacts</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container-fluid home">
-        <div class="jumbotron">
-            <h1>Address book<h1>
-        </div>
+      <div class="jumbotron">
+        <h1>Address book<h1>
+      </div>
 
-        <div class="well">
-            <div class="row">
-                <div class="col-sm-5">
-                    <form action="/new_contact_display" method="post">
-                        <div class="form-group">
-                            <label for="name">Name:</label>
-                            <input type="text" name="name" id="name">
-                        </div>
-                        <div class="form-group">
-                            <label for="number">Number:</label>
-                            <input type="number" name="number" id="number">
-                        </div>
-                        <div class="form-group">
-                            <label for="address">Address:</label>
-                            <input type="text" name="address" id="address">
-                        </div>
-                        <div class="form-group">
-                            <label for="image">Upload an image (with a url)</label>
-                            <input type="text" name="image" id="image">
-                        </div>
-                </div>
-                <div class="col-sm-7">
-                    <!-- empty -->
-                </div>
-            </div>
-                <div class="row">
-                    <div class="col-sm-6">
-                        <button type="submit" class="btn btn-success" name="button"> Add Contact!</button>
-                    </form>
-                    </div>
-
-                    <div class="col-sm-6">
-                        <form action='/delete' method='post'>
-                            <button class="btn btn-danger" type='submit'>Delete all</button>
-                        </form>
-                    </div>
-                </div>
-        </div>
-
-
-
-        {% if contacts is not empty %}
+      <div class="well">
         <div class="row">
-            <div class="col-sm-2">
-                <!-- empty -->
-            </div>
-            <div class="col-sm-8">
-                <h3>Contacts</h3>
-
-                <form action='/search'>
-                    <label for="search">Enter your contact name</label>
-                    <input type="text" name="search" id="search">
-                    <button type='submit'>Search for them!</button>
-                </form>
-
-                {% for contact in contacts %}
-                <div class="panel panel-warning">
-                    <div class="panel-heading">
-                        <p> {{ contact.getName }} </p>
-                    </div>
-                    <div class="panel-body">
-                        <ul>
-                            <li><img src='{{ contact.getImage }}' width='120px'><li>
-                            <li>{{ contact.getNumber }}</li>
-                            <li>{{ contact.getAddress }}</li>
-                        </ul>
-                    </div>
-                </div>
-                {% endfor %}
-            {% endif %}
-            </div>
-            <div class="col-sm-2">
-                <!-- empty -->
-            </div>
+          <div class="col-sm-5">
+            <form action="/new_contact_display" method="post">
+              <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" name="name" id="name">
+              </div>
+              <div class="form-group">
+                <label for="number">Number:</label>
+                <input type="number" name="number" id="number">
+              </div>
+              <div class="form-group">
+                <label for="address">Address:</label>
+                <input type="text" name="address" id="address">
+              </div>
+              <div class="form-group">
+                <label for="image">Upload an image (with a url)</label>
+                <input type="text" name="image" id="image">
+              </div>
+          </div>
+          <div class="col-sm-7">
+          </div>
         </div>
+        <div class="row">
+          <div class="col-sm-6">
+            <button type="submit" class="btn btn-success" name="button"> Add Contact!</button>
+          </form>
+          </div>
+
+          <div class="col-sm-6">
+            <form action='/delete' method='post'>
+              <button class="btn btn-danger" type='submit'>Delete all</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+
+
+    {% if contacts is not empty %}
+    <div class="row">
+      <div class="col-sm-2">
+        <!-- empty -->
+      </div>
+      <div class="col-sm-8">
+        <h3>Contacts</h3>
+
+        <form action='/search'>
+          <label for="search">Enter your contact name</label>
+          <input type="text" name="search" id="search">
+          <button type='submit'>Search for them!</button>
+        </form>
+
+        {% for contact in contacts %}
+        <div class="panel panel-warning">
+          <div class="panel-heading">
+            <p> {{ contact.getName }} </p>
+          </div>
+          <div class="panel-body">
+            <ul>
+              <li><img src='{{ contact.getImage }}' width='120px'><li>
+              <li>{{ contact.getNumber }}</li>
+              <li>{{ contact.getAddress }}</li>
+            </ul>
+          </div>
+        </div>
+        {% endfor %}
+        {% endif %}
+        </div>
+        <div class="col-sm-2">
+        <!-- empty -->
+        </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>
