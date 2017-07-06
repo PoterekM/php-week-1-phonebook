@@ -8,11 +8,11 @@
     <div class="container-fluid" id="contact-created">
       <div class="well">
         <h1>New contact created!</h1>
-        <h3>{{ contacts.getName }}</h3>
+        <h3>{{ contact.getName }}</h3>
         <ul>
-          <img src='{{ contacts.getImage }}' width='120px'>
-          <li> {{ contacts.getNumber }}</li>
-          <li> {{ contacts.getAddress }}</li>
+          <img src='{{ contact.getImage }}' width='120px'>
+          <li> {{ contact.getNumber }}</li>
+          <li> {{ contact.getAddress }}</li>
         </ul>
         <a href='/'>Back to Contacts</a>
       </div>

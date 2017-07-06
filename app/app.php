@@ -15,9 +15,9 @@
         return $app['twig']->render('home.html.twig', array('contacts' => Contact::getAll()));
     });
     $app->post("/new_contact_display", function() use($app) {
-        $contact = new Contact($_POST['name'], $_POST['number'], $_POST['address'], $_POST['image']);
-        $contact->save();
-        return $app['twig']->render('new_contact_display.html.twig', array('contacts' => $contact));
+        $contacts = new Contact($_POST['name'], $_POST['number'], $_POST['address'], $_POST['image']);
+        $contacts->save();
+        return $app['twig']->render('new_contact_display.html.twig', array('contact' => $contacts));
     });
     $app->get("/search", function() use ($app){
         $contacts = Contact::getAll();
